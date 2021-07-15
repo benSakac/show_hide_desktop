@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#Author: Ben Sakac
+
 #Show information about the window manager and about the environment
 output=$(wmctrl -m)
 
