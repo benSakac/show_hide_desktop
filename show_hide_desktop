@@ -1,0 +1,12 @@
+#! /bin/bash
+
+#Show information about the window manager and about the environment
+output=$(wmctrl -m)
+
+#If "showing the desktop" mode is off, turn it on, if it's on, turn it off
+if [[ ${output:(-3):3} = 'OFF' ]]; then 
+    wmctrl -k on
+else 
+    wmctrl -k off
+fi
+
