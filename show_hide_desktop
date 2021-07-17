@@ -8,6 +8,8 @@ output=$(wmctrl -m)
 #If "showing the desktop" mode is off, turn it on, if it's on, turn it off
 if [[ ${output:(-3):3} = 'OFF' ]]; then 
     wmctrl -k on
+elif [[ ${output:(-3):3} = 'N/A' ]]; then
+    wmctrl -k on
 else 
     wmctrl -k off
 fi
